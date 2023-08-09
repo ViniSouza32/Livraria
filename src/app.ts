@@ -15,16 +15,16 @@ function cadastroLivros(
   };
 }
 
-function cadastrarLivro () {
-livros.push(
-        cadastroLivros(
-          prompt("Digite o nome do livro"),
-          prompt("Digite o autor do livro"),
-          prompt("Número de paginas do livro")
-        )
-      );
+function cadastrarLivro() {
+  livros.push(
+    cadastroLivros(
+      prompt("Digite o nome do livro"),
+      prompt("Digite o autor do livro"),
+      prompt("Número de paginas do livro")
+    )
+  );
 
-      console.log("");
+  console.log("");
 }
 
 function exibirLivro() {
@@ -43,18 +43,18 @@ function exibirLivro() {
 
 function editarLivro() {
   let livroProcurar: string = prompt(
-        "Digite o nome do livro que deseja procurar"
-      );
+    "Digite o nome do livro que deseja procurar"
+  );
 
-      for (let i = 0; i < livros.length; i++) {
-        if (livros[i].nome == livroProcurar) {
-          livros[i].nome = prompt("Digite o nome do livro");
-          livros[i].autor = prompt("Digite o nome do autor(a)");
-          livros[i].qtdePag = prompt("Digite a quantidade de páginas do livro");
-        }
-      }
+  for (let i = 0; i < livros.length; i++) {
+    if (livros[i].nome == livroProcurar) {
+      livros[i].nome = prompt("Digite o nome do livro");
+      livros[i].autor = prompt("Digite o nome do autor(a)");
+      livros[i].qtdePag = prompt("Digite a quantidade de páginas do livro");
+    }
+  }
 
-      console.log("");
+  console.log("");
 }
 
 function excluirLivro() {
@@ -120,4 +120,4 @@ do {
     default:
       break;
   }
-} while (opcao != 0)
+} while (opcao != 0);
